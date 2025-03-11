@@ -3,6 +3,9 @@ terraform {
     google = {
       source = "hashicorp/google"
     }
+    random = {
+      source = "hashicorp/random"
+    }
   }
 }
 
@@ -11,8 +14,12 @@ provider "google" {
   region  = "us-east1"
 }
 
+resource "random_id" "unique_id" {
+  byte_length = 4
+}
+
 resource "google_storage_bucket" "static" {
-  name                        = "shane-test-bucket"
+  name                        = "shane-test-bucket-${random_id.unique_id.hex}"
   location                    = "US"
   storage_class               = "STANDARD"
   force_destroy               = true
