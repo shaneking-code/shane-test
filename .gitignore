@@ -1,23 +1,23 @@
 ### GOLANG GITIGNORE
 # Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+scripts/*.exe
+scripts/*.exe~
+scripts/*.dll
+scripts/*.so
+scripts/*.dylib
 
 # Test binary, built with `go test -c`
-*.test
+scripts/*.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+scripts/*.out
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
 # Go workspace file
-go.work
-go.work.sum
+scripts/go.work
+scripts/go.work.sum
 
 # env file
 .env
@@ -31,3 +31,6 @@ terraform/terraform.tfstate.backup
 
 ## OBJECTS GITIGNORE
 objects/*
+
+## GCLOUD KEY
+service-account-key.json
