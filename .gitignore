@@ -1,4 +1,3 @@
-### GOLANG GITIGNORE
 # Binaries for programs and plugins
 scripts/*.exe
 scripts/*.exe~
@@ -34,3 +33,6 @@ objects/*
 
 ## GCLOUD KEY
 service-account-key.json
+
+## DS_STORES
+**/.DS_Store
